@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700&family=Space+Grotesk:wght@500;700&family=Literata:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
+  *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body { margin: 0; background: #091423; color: #B7C5D8; font-family: 'Literata', Georgia, serif; font-size: 17.5px; line-height: 1.68; -webkit-font-smoothing: antialiased; overflow-x: clip; }
   ::selection { background: #E3B463; color: #1B1206; }
@@ -48,34 +49,36 @@
     </div>
   </div>
 
-  <section data-screen-label="Hero" style="position:relative; z-index:1; padding:clamp(112px,14vw,150px) 0 clamp(72px,9vw,104px)">
-    <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px); display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:clamp(32px,5vw,60px); align-items:center">
+  <section data-screen-label="Hero" style="position:relative; z-index:1; padding:clamp(78px,14vw,150px) 0 clamp(48px,9vw,104px)">
+    <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px); display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(28px,5vw,60px); align-items:center">
       <div>
         <div data-rv="1" style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:#E3B463; display:flex; align-items:center; gap:12px; margin-bottom:18px" style-before="content:''; width:26px; height:1px; background:currentColor; opacity:.6">Ebook · Automação com Python</div>
-        <h1 data-type="1" style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(40px,5.6vw,72px); line-height:1.0; letter-spacing:-.022em; margin:0">Devolva <span style="background:linear-gradient(92deg,#F2D9A6,#E3B463 42%,#D19B3D); -webkit-background-clip:text; background-clip:text; color:transparent; white-space:nowrap">11 horas</span><br>da sua semana</h1>
+        <h1 data-type="1" style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(37px,5.6vw,72px); line-height:1.0; letter-spacing:-.022em; margin:0">Devolva <span style="background:linear-gradient(92deg,#F2D9A6,#E3B463 42%,#D19B3D); -webkit-background-clip:text; background-clip:text; color:transparent; white-space:nowrap">11 horas</span><br>da sua semana</h1>
         <p data-rv="1" style="font-size:clamp(18px,1.5vw,20.5px); line-height:1.62; color:#B7C5D8; max-width:540px; margin:24px 0 32px">O guia direto para quem vive de planilhas, relatórios e arquivos — e <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#fff">nunca</span> escreveu uma linha de código. Você termina com automações rodando sozinhas, não com teoria de programação.</p>
         <div data-rv="1" style="display:flex; gap:16px; align-items:center; flex-wrap:wrap">
-          <a href="{{ checkout }}" target="_blank" rel="noopener" data-magnetic="1" style="position:relative; display:inline-flex; flex-direction:column; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; line-height:1.1; padding:19px 34px; border-radius:12px; overflow:hidden; color:#22160A; background:linear-gradient(178deg,#F0C87E,#E3B463 38%,#B87F26); box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 -2px 0 rgba(110,70,10,.28) inset, 0 18px 44px rgba(192,138,46,.42)">Quero automatizar minha semana<span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:500; letter-spacing:.08em; opacity:.72; margin-top:7px; text-transform:uppercase">{{ precoLinha }}</span></a>
-          <a href="#dentro" style="display:inline-flex; align-items:center; gap:10px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; padding:18px 26px; border-radius:12px; border:1px solid rgba(235,217,180,.32); color:#EBD9B4; background:rgba(235,217,180,.03); transition:background .22s ease, border-color .22s ease, transform .22s ease" style-hover="background:rgba(235,217,180,.11); border-color:rgba(235,217,180,.62); transform:translateY(-2px)">Ver o que tem dentro</a>
+          <a href="{{ checkout }}" target="_blank" rel="noopener" data-magnetic="1" style="position:relative; display:inline-flex; flex-direction:column; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; line-height:1.1; padding:18px clamp(22px,5.6vw,34px); border-radius:12px; overflow:hidden; color:#22160A; background:linear-gradient(178deg,#F0C87E,#E3B463 38%,#B87F26); box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 -2px 0 rgba(110,70,10,.28) inset, 0 18px 44px rgba(192,138,46,.42)">Quero automatizar minha semana<span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:500; letter-spacing:.08em; opacity:.72; margin-top:7px; text-transform:uppercase">{{ precoLinha }}</span></a>
+          <a href="#dentro" style="display:inline-flex; align-items:center; gap:10px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; padding:17px clamp(20px,5vw,26px); border-radius:12px; border:1px solid rgba(235,217,180,.32); color:#EBD9B4; background:rgba(235,217,180,.03); transition:background .22s ease, border-color .22s ease, transform .22s ease" style-hover="background:rgba(235,217,180,.11); border-color:rgba(235,217,180,.62); transform:translateY(-2px)">Ver o que tem dentro</a>
         </div>
-        <div data-rv="1" style="display:flex; gap:10px 24px; flex-wrap:wrap; font-family:'Space Grotesk',sans-serif; font-size:13.5px; color:#93A4BA; margin-top:26px">
+        <div data-rv="1" data-facts="1" style="display:flex; gap:10px 24px; flex-wrap:wrap; font-family:'Space Grotesk',sans-serif; font-size:13.5px; color:#93A4BA; margin-top:26px">
           <span style="display:inline-flex; align-items:center; gap:9px"><svg viewBox="0 0 24 24" style="width:15px; height:15px; flex:0 0 15px; stroke:#E3B463; fill:none; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round"><path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"></path><path d="M14 4v6h6"></path></svg>82 páginas em PDF</span>
           <span style="display:inline-flex; align-items:center; gap:9px"><svg viewBox="0 0 24 24" style="width:15px; height:15px; flex:0 0 15px; stroke:#E3B463; fill:none; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg>Acesso imediato</span>
           <span style="display:inline-flex; align-items:center; gap:9px"><svg viewBox="0 0 24 24" style="width:15px; height:15px; flex:0 0 15px; stroke:#E3B463; fill:none; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round"><path d="M20 6 9 17l-5-5"></path></svg>Do zero, sem pré-requisito</span>
         </div>
       </div>
 
-      <div style="position:relative; display:grid; place-items:center; min-height:clamp(360px,50vw,540px)">
+      <div id="lp-book-stage" style="position:relative; display:grid; place-items:center; min-height:clamp(280px,48vw,540px)">
         <div style="position:absolute; width:118%; height:82%; border-radius:50%; background:radial-gradient(ellipse at center,rgba(233,192,120,.30),rgba(9,20,35,0) 66%)"></div>
         <div id="webgl-book" style="position:absolute; inset:0"></div>
-        <img src="assets/mockup-3d.png" alt="Capa do ebook O Fim do Trabalho Repetitivo" id="lp-book-fallback" style="width:min(370px,86%); position:relative; z-index:1; filter:drop-shadow(0 46px 78px rgba(0,0,0,.62)); animation:lpFloat 8s ease-in-out infinite">
-        <div data-rv="1" style="position:absolute; left:0; top:12%; z-index:3; background:rgba(9,20,35,.72); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border:1px solid rgba(235,217,180,.28); border-radius:14px; padding:13px 17px; box-shadow:0 34px 90px rgba(0,0,0,.5)">
-          <b style="display:block; font-family:'Fraunces',serif; font-size:26px; color:#fff; line-height:1; font-weight:900">10</b>
-          <small style="font-family:'Space Grotesk',sans-serif; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:#93A4BA">capítulos</small>
-        </div>
-        <div data-rv="1" style="position:absolute; right:0; bottom:10%; z-index:3; background:rgba(9,20,35,.72); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border:1px solid rgba(235,217,180,.28); border-radius:14px; padding:13px 17px; box-shadow:0 34px 90px rgba(0,0,0,.5)">
-          <b style="display:block; font-family:'Fraunces',serif; font-size:26px; color:#fff; line-height:1; font-weight:900">15</b>
-          <small style="font-family:'Space Grotesk',sans-serif; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:#93A4BA">automações prontas</small>
+        <img src="assets/mockup-3d.png" alt="Capa do ebook O Fim do Trabalho Repetitivo" id="lp-book-fallback" style="width:min(370px,72%); position:relative; z-index:1; filter:drop-shadow(0 46px 78px rgba(0,0,0,.62)); animation:lpFloat 8s ease-in-out infinite">
+        <div id="lp-badges" style="position:absolute; inset:0; z-index:3; pointer-events:none">
+          <div data-badge="1" style="position:absolute; left:0; top:12%; background:rgba(9,20,35,.72); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border:1px solid rgba(235,217,180,.28); border-radius:14px; padding:13px 17px; box-shadow:0 34px 90px rgba(0,0,0,.5)">
+            <b style="display:block; font-family:'Fraunces',serif; font-size:clamp(21px,4.4vw,26px); color:#fff; line-height:1; font-weight:900">10</b>
+            <small style="font-family:'Space Grotesk',sans-serif; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:#93A4BA">capítulos</small>
+          </div>
+          <div data-badge="1" style="position:absolute; right:0; bottom:10%; background:rgba(9,20,35,.72); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border:1px solid rgba(235,217,180,.28); border-radius:14px; padding:13px 17px; box-shadow:0 34px 90px rgba(0,0,0,.5)">
+            <b style="display:block; font-family:'Fraunces',serif; font-size:clamp(21px,4.4vw,26px); color:#fff; line-height:1; font-weight:900">15</b>
+            <small style="font-family:'Space Grotesk',sans-serif; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:#93A4BA">automações prontas</small>
+          </div>
         </div>
       </div>
     </div>
@@ -100,34 +103,34 @@
     </div>
   </div>
 
-  <section data-screen-label="Problema" style="position:relative; z-index:1; padding:clamp(64px,9vw,112px) 0">
+  <section data-screen-label="Problema" style="position:relative; z-index:1; padding:clamp(46px,9vw,112px) 0">
     <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px)">
       <div data-rv="1" style="max-width:740px">
         <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:#E3B463; display:flex; align-items:center; gap:12px; margin-bottom:18px" style-before="content:''; width:26px; height:1px; background:currentColor; opacity:.6">01 — O problema</div>
-        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(30px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Segunda-feira, 8h40.<br><span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">E de novo</span> na terça.</h2>
+        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(27px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Segunda-feira, 8h40.<br><span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">E de novo</span> na terça.</h2>
         <p style="font-size:clamp(18px,1.5vw,20.5px); line-height:1.62; color:#B7C5D8; margin:24px 0 0">Você baixa os mesmos relatórios, copia as mesmas colunas, ajusta o mesmo formato de data e envia para as mesmas quatro pessoas. Não é difícil. É só interminável.</p>
       </div>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:20px; margin-top:44px">
-        <div data-rv="1" data-card="1" style="position:relative; overflow:hidden; background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:30px 28px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:44px">
+        <div data-rv="1" data-card="1" style="position:relative; overflow:hidden; background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:clamp(22px,5.2vw,30px) clamp(20px,4.6vw,28px); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
           <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#E3B463">01</div>
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:clamp(19px,1.6vw,22px); line-height:1.25; letter-spacing:-.015em; margin:14px 0 9px">O tempo não volta</h3>
           <p style="margin:0; font-size:16px; color:#A6B6CA">Entre 8 e 15 horas por semana em tarefas que não exigem julgamento nenhum — e que ninguém vê no seu currículo.</p>
         </div>
-        <div data-rv="1" data-card="1" style="position:relative; overflow:hidden; background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:30px 28px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
+        <div data-rv="1" data-card="1" style="position:relative; overflow:hidden; background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:clamp(22px,5.2vw,30px) clamp(20px,4.6vw,28px); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
           <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#E3B463">02</div>
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:clamp(19px,1.6vw,22px); line-height:1.25; letter-spacing:-.015em; margin:14px 0 9px">O erro sempre aparece</h3>
           <p style="margin:0; font-size:16px; color:#A6B6CA">Copiar 300 linhas à mão sempre cobra o preço: uma célula trocada, um retrabalho, uma decisão baseada em número furado.</p>
         </div>
-        <div data-rv="1" data-card="1" style="position:relative; overflow:hidden; background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:30px 28px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
+        <div data-rv="1" data-card="1" style="position:relative; overflow:hidden; background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:clamp(22px,5.2vw,30px) clamp(20px,4.6vw,28px); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
           <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.18em; color:#E3B463">03</div>
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:clamp(19px,1.6vw,22px); line-height:1.25; letter-spacing:-.015em; margin:14px 0 9px">Os cursos não resolvem</h3>
           <p style="margin:0; font-size:16px; color:#A6B6CA">Você tenta aprender programação, cai num curso de 60 horas sobre orientação a objetos e desiste antes da parte que interessa.</p>
         </div>
       </div>
 
-      <div data-rv="1" style="margin-top:60px; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); border:1px solid rgba(235,217,180,.18); border-radius:20px; overflow:hidden; background:rgba(255,255,255,.03); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px)">
-        <div style="padding:clamp(28px,3vw,38px) clamp(26px,3vw,34px); border-right:1px solid rgba(235,217,180,.14)">
+      <div data-rv="1" style="margin-top:60px; display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); border:1px solid rgba(235,217,180,.18); border-radius:20px; overflow:hidden; background:rgba(255,255,255,.03); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px)">
+        <div data-compare-left="1" style="padding:clamp(24px,4.6vw,38px) clamp(20px,4.4vw,34px); border-right:1px solid rgba(235,217,180,.14)">
           <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:#93A4BA; margin:0 0 20px">Do jeito manual</h4>
           <div style="font-family:'Fraunces',serif; font-weight:900; font-size:clamp(34px,3.6vw,46px); color:#8FA1B8; line-height:1; letter-spacing:-.03em">2h20</div>
           <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#93A4BA; margin:10px 0 22px">toda semana, na mão</div>
@@ -138,7 +141,7 @@
             <li style="position:relative; padding-left:28px; font-size:16.4px; color:#A6B6CA" style-before="content:'×'; position:absolute; left:0; top:0; font-family:'JetBrains Mono',monospace; font-size:15px; color:#6C7C91">Formatar, exportar e lembrar de enviar</li>
           </ul>
         </div>
-        <div style="padding:clamp(28px,3vw,38px) clamp(26px,3vw,34px); background:linear-gradient(160deg,rgba(16,104,98,.20),rgba(192,138,46,.10))">
+        <div style="padding:clamp(24px,4.6vw,38px) clamp(20px,4.4vw,34px); background:linear-gradient(160deg,rgba(16,104,98,.20),rgba(192,138,46,.10))">
           <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:#E3B463; margin:0 0 20px">Depois deste ebook</h4>
           <div style="font-family:'Fraunces',serif; font-weight:900; font-size:clamp(34px,3.6vw,46px); color:#F2D9A6; line-height:1; letter-spacing:-.03em">6 segundos</div>
           <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#93A4BA; margin:10px 0 22px">enquanto você toma café</div>
@@ -162,8 +165,8 @@
     </div>
   </section>
 
-  <section data-screen-label="Numeros" style="position:relative; z-index:1; padding:clamp(48px,7vw,80px) 0; border-top:1px solid rgba(235,217,180,.12); border-bottom:1px solid rgba(235,217,180,.12); background:rgba(6,14,25,.5)">
-    <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px); display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:30px; text-align:center">
+  <section data-screen-label="Numeros" style="position:relative; z-index:1; padding:clamp(38px,7vw,80px) 0; border-top:1px solid rgba(235,217,180,.12); border-bottom:1px solid rgba(235,217,180,.12); background:rgba(6,14,25,.5)">
+    <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px); display:grid; grid-template-columns:repeat(auto-fit,minmax(128px,1fr)); gap:clamp(20px,4vw,30px); text-align:center">
       <div data-rv="1"><b data-count="82" style="display:block; font-family:'Fraunces',serif; font-weight:900; font-size:clamp(40px,4.4vw,58px); color:#E3B463; line-height:1; letter-spacing:-.035em">82</b><span style="font-family:'Space Grotesk',sans-serif; font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:#93A4BA; display:block; margin-top:10px">páginas</span></div>
       <div data-rv="1"><b data-count="10" style="display:block; font-family:'Fraunces',serif; font-weight:900; font-size:clamp(40px,4.4vw,58px); color:#E3B463; line-height:1; letter-spacing:-.035em">10</b><span style="font-family:'Space Grotesk',sans-serif; font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:#93A4BA; display:block; margin-top:10px">capítulos</span></div>
       <div data-rv="1"><b data-count="15" style="display:block; font-family:'Fraunces',serif; font-weight:900; font-size:clamp(40px,4.4vw,58px); color:#E3B463; line-height:1; letter-spacing:-.035em">15</b><span style="font-family:'Space Grotesk',sans-serif; font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:#93A4BA; display:block; margin-top:10px">automações prontas</span></div>
@@ -171,40 +174,40 @@
     </div>
   </section>
 
-  <section data-screen-label="Constroi" style="position:relative; z-index:1; padding:clamp(64px,9vw,112px) 0">
+  <section data-screen-label="Constroi" style="position:relative; z-index:1; padding:clamp(46px,9vw,112px) 0">
     <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px)">
       <div data-rv="1" style="max-width:760px">
         <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:#E3B463; display:flex; align-items:center; gap:12px; margin-bottom:18px" style-before="content:''; width:26px; height:1px; background:currentColor; opacity:.6">02 — O que você vai construir</div>
-        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(30px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Automações que resolvem o seu dia, não <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">exercícios de faculdade</span></h2>
+        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(27px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Automações que resolvem o seu dia, não <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">exercícios de faculdade</span></h2>
         <p style="font-size:clamp(18px,1.5vw,20.5px); line-height:1.62; color:#B7C5D8; margin:24px 0 0">Cada capítulo termina com algo funcionando no seu computador. Estes são alguns dos scripts que você monta ao longo do livro:</p>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin-top:44px">
-        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:28px 26px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; margin-top:44px">
+        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:clamp(22px,5.2vw,28px) clamp(19px,4.4vw,26px); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
           <span style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; color:#F2D9A6; background:rgba(227,180,99,.12); border:1px solid rgba(227,180,99,.28); border-radius:30px; padding:4px 11px">pandas</span>
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:20px; line-height:1.25; letter-spacing:-.015em; margin:16px 0 8px">Consolidador de relatórios</h3>
           <p style="margin:0; font-size:16px; color:#A6B6CA">Junta todos os CSVs de uma pasta num Excel único, limpo e formatado.</p>
         </div>
-        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:28px 26px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
+        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:clamp(22px,5.2vw,28px) clamp(19px,4.4vw,26px); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
           <span style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; color:#F2D9A6; background:rgba(227,180,99,.12); border:1px solid rgba(227,180,99,.28); border-radius:30px; padding:4px 11px">pathlib · shutil</span>
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:20px; line-height:1.25; letter-spacing:-.015em; margin:16px 0 8px">Organizador de arquivos</h3>
           <p style="margin:0; font-size:16px; color:#A6B6CA">Separa, renomeia e arquiva centenas de documentos com um padrão de nome profissional.</p>
         </div>
-        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:28px 26px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
+        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:clamp(22px,5.2vw,28px) clamp(19px,4.4vw,26px); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
           <span style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; color:#F2D9A6; background:rgba(227,180,99,.12); border:1px solid rgba(227,180,99,.28); border-radius:30px; padding:4px 11px">pypdf</span>
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:20px; line-height:1.25; letter-spacing:-.015em; margin:16px 0 8px">Extrator de PDF</h3>
           <p style="margin:0; font-size:16px; color:#A6B6CA">Lê contratos e notas fiscais e devolve os campos-chave numa planilha.</p>
         </div>
-        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:28px 26px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
+        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:clamp(22px,5.2vw,28px) clamp(19px,4.4vw,26px); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
           <span style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; color:#F2D9A6; background:rgba(227,180,99,.12); border:1px solid rgba(227,180,99,.28); border-radius:30px; padding:4px 11px">smtplib</span>
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:20px; line-height:1.25; letter-spacing:-.015em; margin:16px 0 8px">Relatório que se envia</h3>
           <p style="margin:0; font-size:16px; color:#A6B6CA">Dispara o resumo individual de cada gestor, com anexo e corpo em HTML.</p>
         </div>
-        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:28px 26px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
+        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:clamp(22px,5.2vw,28px) clamp(19px,4.4vw,26px); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
           <span style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; color:#F2D9A6; background:rgba(227,180,99,.12); border:1px solid rgba(227,180,99,.28); border-radius:30px; padding:4px 11px">requests</span>
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:20px; line-height:1.25; letter-spacing:-.015em; margin:16px 0 8px">Coletor de dados</h3>
           <p style="margin:0; font-size:16px; color:#A6B6CA">Busca informação em APIs e sites e monta um histórico que antes não existia.</p>
         </div>
-        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:28px 26px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
+        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:1px solid rgba(235,217,180,.16); border-radius:14px; padding:clamp(22px,5.2vw,28px) clamp(19px,4.4vw,26px); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:transform .3s cubic-bezier(.22,.8,.3,1), border-color .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-6px); border-color:rgba(235,217,180,.5); box-shadow:0 26px 60px rgba(0,0,0,.45)">
           <span style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; color:#F2D9A6; background:rgba(227,180,99,.12); border:1px solid rgba(227,180,99,.28); border-radius:30px; padding:4px 11px">logging · cron</span>
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:20px; line-height:1.25; letter-spacing:-.015em; margin:16px 0 8px">Piloto automático</h3>
           <p style="margin:0; font-size:16px; color:#A6B6CA">Agenda tudo para rodar às 6h, com log e aviso automático quando algo falha.</p>
@@ -213,11 +216,11 @@
     </div>
   </section>
 
-  <section id="dentro" data-screen-label="Dentro do ebook" style="position:relative; z-index:1; padding:clamp(64px,9vw,112px) 0; scroll-margin-top:86px; background:rgba(6,14,25,.55); border-top:1px solid rgba(235,217,180,.12); border-bottom:1px solid rgba(235,217,180,.12)">
-    <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px); display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:clamp(36px,5vw,64px); align-items:center">
+  <section id="dentro" data-screen-label="Dentro do ebook" style="position:relative; z-index:1; padding:clamp(46px,9vw,112px) 0; scroll-margin-top:86px; background:rgba(6,14,25,.55); border-top:1px solid rgba(235,217,180,.12); border-bottom:1px solid rgba(235,217,180,.12)">
+    <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px); display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:clamp(30px,5vw,64px); align-items:center">
       <div>
         <div data-rv="1" style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:#E3B463; display:flex; align-items:center; gap:12px; margin-bottom:18px" style-before="content:''; width:26px; height:1px; background:currentColor; opacity:.6">03 — Dentro do ebook</div>
-        <h2 data-rv="1" style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(30px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Uma sequência que vai do zero ao <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">piloto automático</span></h2>
+        <h2 data-rv="1" style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(27px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Uma sequência que vai do zero ao <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">piloto automático</span></h2>
         <div style="margin-top:28px; display:grid">
           <div data-rv="1" style="display:grid; grid-template-columns:34px 1fr; gap:14px; align-items:baseline; padding:14px; border-radius:10px; border-bottom:1px solid rgba(235,217,180,.14); transition:background .24s ease, padding .24s ease, transform .24s ease" style-hover="background:rgba(255,255,255,.06); transform:translateX(8px)"><b style="font-family:'JetBrains Mono',monospace; color:#E3B463; font-size:12.5px">01</b><span style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:16.4px; color:#E9EFF7; letter-spacing:-.012em">A verdade sobre automação: por que você não precisa virar programador</span></div>
           <div data-rv="1" style="display:grid; grid-template-columns:34px 1fr; gap:14px; align-items:baseline; padding:14px; border-radius:10px; border-bottom:1px solid rgba(235,217,180,.14); transition:background .24s ease, padding .24s ease, transform .24s ease" style-hover="background:rgba(255,255,255,.06); transform:translateX(8px)"><b style="font-family:'JetBrains Mono',monospace; color:#E3B463; font-size:12.5px">02</b><span style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:16.4px; color:#E9EFF7; letter-spacing:-.012em">O mapa das tarefas automatizáveis: onde está o seu tempo</span></div>
@@ -237,29 +240,29 @@
     </div>
   </section>
 
-  <section data-screen-label="Bonus" style="position:relative; z-index:1; padding:clamp(64px,9vw,112px) 0">
+  <section data-screen-label="Bonus" style="position:relative; z-index:1; padding:clamp(46px,9vw,112px) 0">
     <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px)">
       <div data-rv="1" style="max-width:760px">
         <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:#E3B463; display:flex; align-items:center; gap:12px; margin-bottom:18px" style-before="content:''; width:26px; height:1px; background:currentColor; opacity:.6">04 — Além dos capítulos</div>
-        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(30px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Quatro bônus que transformam leitura em <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">execução</span></h2>
+        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(27px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Quatro bônus que transformam leitura em <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">execução</span></h2>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px; margin-top:44px">
-        <div data-rv="1" data-card="1" style="background:rgba(255,255,255,.05); border:1px solid rgba(235,217,180,.18); border-radius:14px; padding:28px 24px; transition:background .26s ease, border-color .26s ease, transform .26s cubic-bezier(.22,.8,.3,1)" style-hover="background:rgba(255,255,255,.09); border-color:rgba(235,217,180,.46); transform:translateY(-6px)">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:16px; margin-top:44px">
+        <div data-rv="1" data-card="1" style="background:rgba(255,255,255,.05); border:1px solid rgba(235,217,180,.18); border-radius:14px; padding:clamp(22px,5.2vw,28px) clamp(18px,4.2vw,24px); transition:background .26s ease, border-color .26s ease, transform .26s cubic-bezier(.22,.8,.3,1)" style-hover="background:rgba(255,255,255,.09); border-color:rgba(235,217,180,.46); transform:translateY(-6px)">
           <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em; color:#E3B463">BÔNUS 1</div>
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:19px; line-height:1.25; margin:12px 0 9px">Plano de 30 dias</h3>
           <p style="font-size:15px; margin:0; color:#A6B6CA">O que fazer em cada dia, em blocos de 30 a 45 minutos, até ter a primeira automação rodando sozinha.</p>
         </div>
-        <div data-rv="1" data-card="1" style="background:rgba(255,255,255,.05); border:1px solid rgba(235,217,180,.18); border-radius:14px; padding:28px 24px; transition:background .26s ease, border-color .26s ease, transform .26s cubic-bezier(.22,.8,.3,1)" style-hover="background:rgba(255,255,255,.09); border-color:rgba(235,217,180,.46); transform:translateY(-6px)">
+        <div data-rv="1" data-card="1" style="background:rgba(255,255,255,.05); border:1px solid rgba(235,217,180,.18); border-radius:14px; padding:clamp(22px,5.2vw,28px) clamp(18px,4.2vw,24px); transition:background .26s ease, border-color .26s ease, transform .26s cubic-bezier(.22,.8,.3,1)" style-hover="background:rgba(255,255,255,.09); border-color:rgba(235,217,180,.46); transform:translateY(-6px)">
           <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em; color:#E3B463">BÔNUS 2</div>
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:19px; line-height:1.25; margin:12px 0 9px">Receituário de 15 automações</h3>
           <p style="font-size:15px; margin:0; color:#A6B6CA">Um cardápio com território, dificuldade e bibliotecas de cada script — é só escolher e adaptar.</p>
         </div>
-        <div data-rv="1" data-card="1" style="background:rgba(255,255,255,.05); border:1px solid rgba(235,217,180,.18); border-radius:14px; padding:28px 24px; transition:background .26s ease, border-color .26s ease, transform .26s cubic-bezier(.22,.8,.3,1)" style-hover="background:rgba(255,255,255,.09); border-color:rgba(235,217,180,.46); transform:translateY(-6px)">
+        <div data-rv="1" data-card="1" style="background:rgba(255,255,255,.05); border:1px solid rgba(235,217,180,.18); border-radius:14px; padding:clamp(22px,5.2vw,28px) clamp(18px,4.2vw,24px); transition:background .26s ease, border-color .26s ease, transform .26s cubic-bezier(.22,.8,.3,1)" style-hover="background:rgba(255,255,255,.09); border-color:rgba(235,217,180,.46); transform:translateY(-6px)">
           <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em; color:#E3B463">BÔNUS 3</div>
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:19px; line-height:1.25; margin:12px 0 9px">Os 12 erros que travam</h3>
           <p style="font-size:15px; margin:0; color:#A6B6CA">As armadilhas que fazem a maioria desistir na primeira semana — e o ajuste de rota para cada uma.</p>
         </div>
-        <div data-rv="1" data-card="1" style="background:rgba(255,255,255,.05); border:1px solid rgba(235,217,180,.18); border-radius:14px; padding:28px 24px; transition:background .26s ease, border-color .26s ease, transform .26s cubic-bezier(.22,.8,.3,1)" style-hover="background:rgba(255,255,255,.09); border-color:rgba(235,217,180,.46); transform:translateY(-6px)">
+        <div data-rv="1" data-card="1" style="background:rgba(255,255,255,.05); border:1px solid rgba(235,217,180,.18); border-radius:14px; padding:clamp(22px,5.2vw,28px) clamp(18px,4.2vw,24px); transition:background .26s ease, border-color .26s ease, transform .26s cubic-bezier(.22,.8,.3,1)" style-hover="background:rgba(255,255,255,.09); border-color:rgba(235,217,180,.46); transform:translateY(-6px)">
           <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em; color:#E3B463">BÔNUS 4</div>
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:19px; line-height:1.25; margin:12px 0 9px">Perguntas frequentes</h3>
           <p style="font-size:15px; margin:0; color:#A6B6CA">Do "meu TI não deixa instalar nada" ao "com IA ainda faz sentido aprender isso?".</p>
@@ -268,11 +271,11 @@
     </div>
   </section>
 
-  <section data-screen-label="Amostra" style="position:relative; z-index:1; padding:clamp(64px,9vw,112px) 0">
-    <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px); display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:clamp(36px,5vw,58px); align-items:center">
+  <section data-screen-label="Amostra" style="position:relative; z-index:1; padding:clamp(46px,9vw,112px) 0">
+    <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px); display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:clamp(30px,5vw,58px); align-items:center">
       <div data-rv="1">
         <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:#E3B463; display:flex; align-items:center; gap:12px; margin-bottom:18px" style-before="content:''; width:26px; height:1px; background:currentColor; opacity:.6">05 — Como o material é</div>
-        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(30px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Código explicado linha a linha, não <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">copiado e colado</span></h2>
+        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(27px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Código explicado linha a linha, não <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">copiado e colado</span></h2>
         <p style="font-size:clamp(18px,1.5vw,20.5px); line-height:1.62; color:#B7C5D8; margin:24px 0 1.05em">Cada script vem comentado, com o passo a passo do que ele faz, os erros mais comuns e o que ajustar quando a sua planilha for diferente do exemplo.</p>
         <p style="margin:0; color:#A6B6CA">Diagramação pensada para ler na tela: parágrafos curtos, blocos de destaque, checklists e atividades práticas no fim de cada capítulo.</p>
       </div>
@@ -284,14 +287,14 @@
     </div>
   </section>
 
-  <section data-screen-label="Para quem" style="position:relative; z-index:1; padding:clamp(64px,9vw,112px) 0; background:rgba(6,14,25,.55); border-top:1px solid rgba(235,217,180,.12); border-bottom:1px solid rgba(235,217,180,.12)">
+  <section data-screen-label="Para quem" style="position:relative; z-index:1; padding:clamp(46px,9vw,112px) 0; background:rgba(6,14,25,.55); border-top:1px solid rgba(235,217,180,.12); border-bottom:1px solid rgba(235,217,180,.12)">
     <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px)">
       <div data-rv="1" style="max-width:760px; margin:0 auto; text-align:center">
         <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:#E3B463; display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:18px">06 — Antes de comprar</div>
-        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(30px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Este ebook é <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">para você</span>?</h2>
+        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(27px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Este ebook é <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">para você</span>?</h2>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:22px; margin-top:44px">
-        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(16,104,98,.22),rgba(255,255,255,.03)); border:1px solid rgba(159,227,210,.28); border-radius:14px; padding:34px 32px">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(282px,1fr)); gap:18px; margin-top:44px">
+        <div data-rv="1" data-card="1" style="background:linear-gradient(160deg,rgba(16,104,98,.22),rgba(255,255,255,.03)); border:1px solid rgba(159,227,210,.28); border-radius:14px; padding:clamp(24px,5.4vw,34px) clamp(21px,4.8vw,32px)">
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:22px; margin:0 0 14px">Feito para</h3>
           <ul style="list-style:none; margin:0; padding:0; display:grid; gap:14px">
             <li style="position:relative; padding-left:34px; font-size:16.4px; color:#D6E1EE" style-before="content:'✓'; position:absolute; left:0; top:2px; width:22px; height:22px; border-radius:50%; background:rgba(159,227,210,.18); color:#9FE3D2; display:grid; place-items:center; font-size:12px; font-family:'Space Grotesk',sans-serif; font-weight:700">Quem trabalha o dia inteiro no computador com planilhas, relatórios e arquivos</li>
@@ -300,7 +303,7 @@
             <li style="position:relative; padding-left:34px; font-size:16.4px; color:#D6E1EE" style-before="content:'✓'; position:absolute; left:0; top:2px; width:22px; height:22px; border-radius:50%; background:rgba(159,227,210,.18); color:#9FE3D2; display:grid; place-items:center; font-size:12px; font-family:'Space Grotesk',sans-serif; font-weight:700">Quem quer virar a pessoa do time que resolve em segundos o que os outros fazem em horas</li>
           </ul>
         </div>
-        <div data-rv="1" data-card="1" style="background:rgba(255,255,255,.03); border:1px solid rgba(235,217,180,.14); border-radius:14px; padding:34px 32px">
+        <div data-rv="1" data-card="1" style="background:rgba(255,255,255,.03); border:1px solid rgba(235,217,180,.14); border-radius:14px; padding:clamp(24px,5.4vw,34px) clamp(21px,4.8vw,32px)">
           <h3 style="font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:22px; margin:0 0 14px">Não é para</h3>
           <ul style="list-style:none; margin:0; padding:0; display:grid; gap:14px">
             <li style="position:relative; padding-left:34px; font-size:16.4px; color:#94A5BA" style-before="content:'–'; position:absolute; left:0; top:2px; width:22px; height:22px; border-radius:50%; background:rgba(255,255,255,.07); color:#7E8DA1; display:grid; place-items:center; font-size:12px; font-family:'Space Grotesk',sans-serif; font-weight:700">Quem já é desenvolvedor e quer aprofundar arquitetura de software</li>
@@ -313,14 +316,14 @@
     </div>
   </section>
 
-  <section id="oferta" data-screen-label="Oferta" style="position:relative; z-index:1; padding:clamp(64px,9vw,112px) 0; scroll-margin-top:86px">
+  <section id="oferta" data-screen-label="Oferta" style="position:relative; z-index:1; padding:clamp(46px,9vw,112px) 0; scroll-margin-top:86px">
     <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px)">
       <div data-rv="1" style="max-width:760px; margin:0 auto 44px; text-align:center">
         <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:#E3B463; display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:18px">07 — A oferta</div>
-        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(30px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Menos que um lanche. Mais barato que <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">uma tarde perdida</span>.</h2>
+        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(27px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">Menos que um lanche. Mais barato que <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">uma tarde perdida</span>.</h2>
       </div>
 
-      <div data-rv="1" style="background:#FBF8F3; border:1px solid rgba(235,217,180,.4); border-radius:26px; overflow:hidden; box-shadow:0 44px 120px rgba(0,0,0,.55); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+      <div data-rv="1" style="background:#FBF8F3; border:1px solid rgba(235,217,180,.4); border-radius:26px; overflow:hidden; box-shadow:0 44px 120px rgba(0,0,0,.55); display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr))">
         <div style="background:linear-gradient(158deg,#0F1E33,#123152); padding:clamp(36px,4vw,52px) clamp(30px,3.5vw,44px); display:grid; place-items:center; position:relative; overflow:hidden">
           <div style="position:absolute; inset:0; opacity:.18; background-image:linear-gradient(rgba(192,138,46,.6) .5px,transparent .5px),linear-gradient(90deg,rgba(192,138,46,.6) .5px,transparent .5px); background-size:48px 48px"></div>
           <div style="position:absolute; width:440px; height:440px; right:-170px; top:-150px; border-radius:50%; background:radial-gradient(circle,rgba(192,138,46,.34),rgba(15,30,51,0) 66%); animation:lpPulse 9s ease-in-out infinite"></div>
@@ -341,7 +344,7 @@
             <span style="font-family:'Fraunces',serif; font-weight:900; font-size:clamp(52px,6vw,68px); color:#131D2B; line-height:.86; letter-spacing:-.04em"><span style="font-size:.42em; vertical-align:super; margin-right:4px; color:#778394">R$</span>{{ preco }}<span style="font-size:.46em; vertical-align:super; margin-left:2px">,{{ centavos }}</span></span>
             <span style="font-family:'Space Grotesk',sans-serif; font-size:14px; color:#778394; padding-bottom:9px">{{ parcelas }}</span>
           </div>
-          <a href="{{ checkout }}" target="_blank" rel="noopener" data-magnetic="1" style="position:relative; display:inline-flex; align-items:center; justify-content:center; margin-top:20px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; padding:19px 34px; border-radius:12px; overflow:hidden; color:#22160A; background:linear-gradient(178deg,#F0C87E,#E3B463 38%,#B87F26); box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 -2px 0 rgba(110,70,10,.28) inset, 0 16px 38px rgba(192,138,46,.4)">Comprar agora com acesso imediato</a>
+          <a href="{{ checkout }}" target="_blank" rel="noopener" data-magnetic="1" style="position:relative; display:inline-flex; align-items:center; justify-content:center; margin-top:20px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; padding:18px clamp(22px,5.6vw,34px); border-radius:12px; overflow:hidden; color:#22160A; background:linear-gradient(178deg,#F0C87E,#E3B463 38%,#B87F26); box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 -2px 0 rgba(110,70,10,.28) inset, 0 16px 38px rgba(192,138,46,.4)">Comprar agora com acesso imediato</a>
           <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:18px; font-family:'Space Grotesk',sans-serif; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#778394">
             <em style="font-style:normal; border:1px solid #E4DACA; border-radius:7px; padding:6px 11px; background:#F3ECE0">Pix</em>
             <em style="font-style:normal; border:1px solid #E4DACA; border-radius:7px; padding:6px 11px; background:#F3ECE0">Cartão</em>
@@ -349,7 +352,7 @@
             <span style="letter-spacing:.02em; text-transform:none; font-size:12.5px">ambiente seguro</span>
           </div>
           <p style="font-size:13.5px; color:#778394; margin:16px 0 0; line-height:1.55">Após a confirmação do pagamento, o link de download chega automaticamente no seu e-mail.</p>
-          <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap; margin-top:30px; padding:24px 26px; background:#DCEEEB; border:1px solid #B7DCD7; border-radius:16px">
+          <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap; margin-top:26px; padding:clamp(19px,4.6vw,24px) clamp(18px,4.4vw,26px); background:#DCEEEB; border:1px solid #B7DCD7; border-radius:16px">
             <div style="position:relative; width:88px; height:88px; flex:0 0 88px; display:grid; place-items:center">
               <svg viewBox="0 0 100 100" aria-hidden="true" style="position:absolute; inset:0; width:88px; height:88px; animation:lpSpin 22s linear infinite">
                 <defs><path id="lpcirc" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"></path></defs>
@@ -364,53 +367,53 @@
     </div>
   </section>
 
-  <section data-screen-label="FAQ" style="position:relative; z-index:1; padding:clamp(64px,9vw,112px) 0; background:rgba(6,14,25,.55); border-top:1px solid rgba(235,217,180,.12)">
+  <section data-screen-label="FAQ" style="position:relative; z-index:1; padding:clamp(46px,9vw,112px) 0; background:rgba(6,14,25,.55); border-top:1px solid rgba(235,217,180,.12)">
     <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px)">
       <div data-rv="1" style="max-width:760px; margin:0 auto; text-align:center">
         <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:#E3B463; display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:18px">08 — Dúvidas</div>
-        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(30px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">O que costumam <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">perguntar</span></h2>
+        <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(27px,4.2vw,50px); line-height:1.06; letter-spacing:-.022em; margin:0">O que costumam <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">perguntar</span></h2>
       </div>
       <div style="max-width:860px; margin:44px auto 0; display:grid; gap:12px">
         <details data-rv="1" style="background:rgba(255,255,255,.04); border:1px solid rgba(235,217,180,.16); border-radius:14px; overflow:hidden">
-          <summary style="cursor:pointer; list-style:none; padding:22px 60px 22px 26px; position:relative; font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff; font-size:17px; letter-spacing:-.012em">Preciso saber programar para acompanhar?<span style="position:absolute; right:24px; top:50%; margin-top:-7px; color:#E3B463; font-family:'JetBrains Mono',monospace; font-size:15px">+</span></summary>
-          <div style="padding:0 26px 24px; font-size:16.4px; color:#A6B6CA"><p style="margin:0">Não. O ebook parte do zero: o que instalar, onde escrever, como rodar o primeiro script. O Capítulo 3 ensina só os sete conceitos de Python que aparecem em toda automação de rotina — o resto da linguagem você não precisa para começar.</p></div>
+          <summary style="cursor:pointer; list-style:none; padding:19px 50px 19px 20px; position:relative; font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff; font-size:17px; letter-spacing:-.012em">Preciso saber programar para acompanhar?<span style="position:absolute; right:20px; top:50%; margin-top:-7px; color:#E3B463; font-family:'JetBrains Mono',monospace; font-size:15px">+</span></summary>
+          <div style="padding:0 20px 22px; font-size:16.4px; color:#A6B6CA"><p style="margin:0">Não. O ebook parte do zero: o que instalar, onde escrever, como rodar o primeiro script. O Capítulo 3 ensina só os sete conceitos de Python que aparecem em toda automação de rotina — o resto da linguagem você não precisa para começar.</p></div>
         </details>
         <details data-rv="1" style="background:rgba(255,255,255,.04); border:1px solid rgba(235,217,180,.16); border-radius:14px; overflow:hidden">
-          <summary style="cursor:pointer; list-style:none; padding:22px 60px 22px 26px; position:relative; font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff; font-size:17px; letter-spacing:-.012em">Quanto tempo até eu automatizar algo de verdade?<span style="position:absolute; right:24px; top:50%; margin-top:-7px; color:#E3B463; font-family:'JetBrains Mono',monospace; font-size:15px">+</span></summary>
-          <div style="padding:0 26px 24px; font-size:16.4px; color:#A6B6CA"><p style="margin:0">Entre 8 e 15 horas de prática, distribuídas em duas semanas, se você focar num problema real do seu trabalho. O plano de 30 dias organiza isso em blocos de 30 a 45 minutos por dia.</p></div>
+          <summary style="cursor:pointer; list-style:none; padding:19px 50px 19px 20px; position:relative; font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff; font-size:17px; letter-spacing:-.012em">Quanto tempo até eu automatizar algo de verdade?<span style="position:absolute; right:20px; top:50%; margin-top:-7px; color:#E3B463; font-family:'JetBrains Mono',monospace; font-size:15px">+</span></summary>
+          <div style="padding:0 20px 22px; font-size:16.4px; color:#A6B6CA"><p style="margin:0">Entre 8 e 15 horas de prática, distribuídas em duas semanas, se você focar num problema real do seu trabalho. O plano de 30 dias organiza isso em blocos de 30 a 45 minutos por dia.</p></div>
         </details>
         <details data-rv="1" style="background:rgba(255,255,255,.04); border:1px solid rgba(235,217,180,.16); border-radius:14px; overflow:hidden">
-          <summary style="cursor:pointer; list-style:none; padding:22px 60px 22px 26px; position:relative; font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff; font-size:17px; letter-spacing:-.012em">Funciona no Windows e no Mac?<span style="position:absolute; right:24px; top:50%; margin-top:-7px; color:#E3B463; font-family:'JetBrains Mono',monospace; font-size:15px">+</span></summary>
-          <div style="padding:0 26px 24px; font-size:16.4px; color:#A6B6CA"><p style="margin:0">Sim. As instruções de instalação, ambiente e agendamento cobrem Windows (Agendador de Tarefas) e Mac/Linux (cron), com as armadilhas de cada um sinalizadas.</p></div>
+          <summary style="cursor:pointer; list-style:none; padding:19px 50px 19px 20px; position:relative; font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff; font-size:17px; letter-spacing:-.012em">Funciona no Windows e no Mac?<span style="position:absolute; right:20px; top:50%; margin-top:-7px; color:#E3B463; font-family:'JetBrains Mono',monospace; font-size:15px">+</span></summary>
+          <div style="padding:0 20px 22px; font-size:16.4px; color:#A6B6CA"><p style="margin:0">Sim. As instruções de instalação, ambiente e agendamento cobrem Windows (Agendador de Tarefas) e Mac/Linux (cron), com as armadilhas de cada um sinalizadas.</p></div>
         </details>
         <details data-rv="1" style="background:rgba(255,255,255,.04); border:1px solid rgba(235,217,180,.16); border-radius:14px; overflow:hidden">
-          <summary style="cursor:pointer; list-style:none; padding:22px 60px 22px 26px; position:relative; font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff; font-size:17px; letter-spacing:-.012em">Serve para o meu tipo de trabalho?<span style="position:absolute; right:24px; top:50%; margin-top:-7px; color:#E3B463; font-family:'JetBrains Mono',monospace; font-size:15px">+</span></summary>
-          <div style="padding:0 26px 24px; font-size:16.4px; color:#A6B6CA"><p style="margin:0">Se o seu dia envolve planilhas, arquivos, PDFs, relatórios recorrentes ou e-mails repetitivos, serve. Os exemplos vêm de rotinas de financeiro, compras, vendas, RH, contabilidade e operações.</p></div>
+          <summary style="cursor:pointer; list-style:none; padding:19px 50px 19px 20px; position:relative; font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff; font-size:17px; letter-spacing:-.012em">Serve para o meu tipo de trabalho?<span style="position:absolute; right:20px; top:50%; margin-top:-7px; color:#E3B463; font-family:'JetBrains Mono',monospace; font-size:15px">+</span></summary>
+          <div style="padding:0 20px 22px; font-size:16.4px; color:#A6B6CA"><p style="margin:0">Se o seu dia envolve planilhas, arquivos, PDFs, relatórios recorrentes ou e-mails repetitivos, serve. Os exemplos vêm de rotinas de financeiro, compras, vendas, RH, contabilidade e operações.</p></div>
         </details>
         <details data-rv="1" style="background:rgba(255,255,255,.04); border:1px solid rgba(235,217,180,.16); border-radius:14px; overflow:hidden">
-          <summary style="cursor:pointer; list-style:none; padding:22px 60px 22px 26px; position:relative; font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff; font-size:17px; letter-spacing:-.012em">Com IA escrevendo código, ainda vale aprender isso?<span style="position:absolute; right:24px; top:50%; margin-top:-7px; color:#E3B463; font-family:'JetBrains Mono',monospace; font-size:15px">+</span></summary>
-          <div style="padding:0 26px 24px; font-size:16.4px; color:#A6B6CA"><p style="margin:0">Vale mais do que antes. A IA escreve o script, mas alguém precisa saber qual problema resolver, onde os dados moram, se o resultado está certo e o que fazer quando quebra. O Capítulo 10 mostra como usar IA como copiloto sem virar refém dela.</p></div>
+          <summary style="cursor:pointer; list-style:none; padding:19px 50px 19px 20px; position:relative; font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff; font-size:17px; letter-spacing:-.012em">Com IA escrevendo código, ainda vale aprender isso?<span style="position:absolute; right:20px; top:50%; margin-top:-7px; color:#E3B463; font-family:'JetBrains Mono',monospace; font-size:15px">+</span></summary>
+          <div style="padding:0 20px 22px; font-size:16.4px; color:#A6B6CA"><p style="margin:0">Vale mais do que antes. A IA escreve o script, mas alguém precisa saber qual problema resolver, onde os dados moram, se o resultado está certo e o que fazer quando quebra. O Capítulo 10 mostra como usar IA como copiloto sem virar refém dela.</p></div>
         </details>
         <details data-rv="1" style="background:rgba(255,255,255,.04); border:1px solid rgba(235,217,180,.16); border-radius:14px; overflow:hidden">
-          <summary style="cursor:pointer; list-style:none; padding:22px 60px 22px 26px; position:relative; font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff; font-size:17px; letter-spacing:-.012em">Como recebo o material?<span style="position:absolute; right:24px; top:50%; margin-top:-7px; color:#E3B463; font-family:'JetBrains Mono',monospace; font-size:15px">+</span></summary>
-          <div style="padding:0 26px 24px; font-size:16.4px; color:#A6B6CA"><p style="margin:0">Em PDF, por e-mail, logo após a confirmação do pagamento. O arquivo é seu para sempre: leia no computador, no tablet ou imprima.</p></div>
+          <summary style="cursor:pointer; list-style:none; padding:19px 50px 19px 20px; position:relative; font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff; font-size:17px; letter-spacing:-.012em">Como recebo o material?<span style="position:absolute; right:20px; top:50%; margin-top:-7px; color:#E3B463; font-family:'JetBrains Mono',monospace; font-size:15px">+</span></summary>
+          <div style="padding:0 20px 22px; font-size:16.4px; color:#A6B6CA"><p style="margin:0">Em PDF, por e-mail, logo após a confirmação do pagamento. O arquivo é seu para sempre: leia no computador, no tablet ou imprima.</p></div>
         </details>
       </div>
     </div>
   </section>
 
-  <section data-screen-label="Fecho" style="position:relative; z-index:1; padding:clamp(72px,10vw,120px) 0; text-align:center; overflow:hidden">
+  <section data-screen-label="Fecho" style="position:relative; z-index:1; padding:clamp(54px,10vw,120px) 0; text-align:center; overflow:hidden">
     <div style="position:absolute; left:50%; top:50%; width:min(760px,110vw); height:min(760px,110vw); transform:translate(-50%,-50%); border-radius:50%; background:radial-gradient(circle,rgba(192,138,46,.22),rgba(9,20,35,0) 66%); pointer-events:none"></div>
     <div data-rv="1" style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px); position:relative">
       <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:#E3B463; display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:18px">Última palavra</div>
       <h2 style="font-family:'Fraunces',serif; font-weight:900; color:#fff; font-size:clamp(30px,4.4vw,52px); line-height:1.06; letter-spacing:-.022em; max-width:900px; margin:18px auto 0">A distância entre ler sobre automação e ter uma rodando é <span style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; color:#E3B463">uma tarde</span>.</h2>
       <p style="font-size:clamp(18px,1.5vw,20.5px); line-height:1.62; color:#B7C5D8; max-width:620px; margin:24px auto 36px">Escolha a tarefa mais chata da sua semana. Daqui a 30 dias ela pode acontecer sozinha, às 6h da manhã, enquanto você dorme.</p>
-      <a href="{{ checkout }}" target="_blank" rel="noopener" data-magnetic="1" style="position:relative; display:inline-flex; flex-direction:column; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; line-height:1.1; padding:19px 36px; border-radius:12px; overflow:hidden; color:#22160A; background:linear-gradient(178deg,#F0C87E,#E3B463 38%,#B87F26); box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 -2px 0 rgba(110,70,10,.28) inset, 0 18px 46px rgba(192,138,46,.46)">Quero começar hoje<span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:500; letter-spacing:.08em; opacity:.72; margin-top:7px; text-transform:uppercase">{{ precoLinha }}</span></a>
+      <a href="{{ checkout }}" target="_blank" rel="noopener" data-magnetic="1" style="position:relative; display:inline-flex; flex-direction:column; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; line-height:1.1; padding:18px clamp(22px,5.6vw,36px); border-radius:12px; overflow:hidden; color:#22160A; background:linear-gradient(178deg,#F0C87E,#E3B463 38%,#B87F26); box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 -2px 0 rgba(110,70,10,.28) inset, 0 18px 46px rgba(192,138,46,.46)">Quero começar hoje<span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:500; letter-spacing:.08em; opacity:.72; margin-top:7px; text-transform:uppercase">{{ precoLinha }}</span></a>
     </div>
   </section>
 
   <footer style="position:relative; z-index:1; background:rgba(4,10,18,.9); color:#6E8098; padding:44px 0; font-size:13.5px; border-top:1px solid rgba(235,217,180,.12)">
-    <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:center">
+    <div style="width:100%; max-width:1200px; margin:0 auto; padding:0 clamp(20px,4vw,26px); display:flex; flex-wrap:wrap; gap:8px 22px; align-items:center">
       <span style="font-family:'Fraunces',serif; color:#A3B3C7; font-weight:900; font-size:16px">O Fim do Trabalho Repetitivo</span>
       <span>{{ autor }}</span>
       <span>Todos os direitos reservados.</span>
@@ -418,7 +421,7 @@
   </footer>
 
   <div id="lp-mobile-cta" style="position:fixed; left:0; right:0; bottom:0; z-index:95; display:none; align-items:center; gap:14px; background:rgba(9,20,35,.96); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-top:1px solid rgba(235,217,180,.22); padding:12px 16px calc(12px + env(safe-area-inset-bottom))">
-    <div style="font-family:'Space Grotesk',sans-serif; color:#fff; font-size:16px; line-height:1.15"><small style="display:block; color:#93A4BA; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:2px">Acesso imediato</small>{{ precoTexto }}</div>
+    <div style="display:grid; gap:3px; font-family:'Space Grotesk',sans-serif; color:#fff; font-size:16px; line-height:1.15"><small style="color:#93A4BA; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase">Acesso imediato</small><span>{{ precoTexto }}</span></div>
     <a href="{{ checkout }}" target="_blank" rel="noopener" style="margin-left:auto; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; padding:14px 22px; border-radius:10px; color:#22160A; background:linear-gradient(178deg,#F0C87E,#E3B463 38%,#B87F26)">Comprar</a>
   </div>
 </div>
@@ -615,9 +618,40 @@ class Component extends DCLogic {
       if (bar) bar.style.transform = y > innerHeight * 0.85 && innerWidth > 760 ? 'translateY(0)' : 'translateY(-102%)';
     };
     on(document, 'scroll', onScroll, { passive: true, capture: true });
+    // ---------- ajustes de layout para telas estreitas ----------
+    const badges = document.getElementById('lp-badges');
+    const stage = document.getElementById('lp-book-stage');
+    const compare = root.querySelector('[data-compare-left]');
+    const applyNarrow = () => {
+      const narrow = innerWidth <= 760;
+      if (badges) {
+        badges.style.position = narrow ? 'static' : 'absolute';
+        badges.style.display = narrow ? 'flex' : 'block';
+        if (narrow) {
+          badges.style.cssText += '; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:6px';
+        } else {
+          badges.style.marginTop = '0';
+        }
+        badges.querySelectorAll('[data-badge]').forEach(b => {
+          b.style.position = narrow ? 'static' : 'absolute';
+          b.style.padding = narrow ? '10px 14px' : '13px 17px';
+          b.style.boxShadow = narrow ? '0 12px 30px rgba(0,0,0,.42)' : '0 34px 90px rgba(0,0,0,.5)';
+        });
+      }
+      if (stage) stage.style.minHeight = narrow ? 'min(74vw,340px)' : '';
+      const facts = root.querySelector('[data-facts]');
+      if (facts) {
+        facts.style.flexDirection = narrow ? 'column' : 'row';
+        facts.style.gap = narrow ? '9px' : '10px 24px';
+      }
+      if (compare) compare.style.borderRight = narrow ? '0' : '1px solid rgba(235,217,180,.14)';
+      if (compare) compare.style.borderBottom = narrow ? '1px solid rgba(235,217,180,.14)' : '0';
+    };
+
     const onResize = () => {
       if (mob) mob.style.display = innerWidth <= 760 ? 'flex' : 'none';
       document.body.style.paddingBottom = innerWidth <= 760 ? '84px' : '0';
+      applyNarrow();
       onScroll();
     };
     on(window, 'scroll', onScroll, { passive: true });
